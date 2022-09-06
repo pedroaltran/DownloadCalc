@@ -3,9 +3,9 @@
     $size = $_GET["fsize"];
     $speed =$_GET["fspeed"];
     $res = $size/($speed/8);
-    $hora = ($res/3600);
-    $minuto = (($res - ($hora * 3600))/60);
-    $segundo = ($res - (($hora*3600) + ($minuto * 60)));
+    $hora = floor($res/3600);
+    $minuto = floor(($res - ($hora * 3600))/60);
+    $segundo = floor($res - (($hora*3600) + ($minuto * 60)));
 
 
 
